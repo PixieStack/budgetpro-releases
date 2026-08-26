@@ -119,6 +119,15 @@ jobs:
         run: |
           chmod +x gradlew
           ./gradlew assembleRelease --no-daemon
+      - name: Verify Android signature and package identity
+        working-directory: native/android/android
+        run: |
+          apk="app/build/outputs/apk/release/app-release.apk"
+          "$ANDROID_HOME/build-tools/36.0.0/apksigner" verify --verbose --print-certs "$apk"
+          package_info=$("$ANDROID_HOME/build-tools/36.0.0/aapt" dump badging "$apk" | head -n 1)
+          echo "$package_info"
+          [[ "$package_info" == *"name='com.pixiestack.budgetpro'"* ]]
+          [[ "$package_info" == *"versionName='${NATIVE_VERSION}'"* ]]
       - name: Name Android package
         run: mv native/android/android/app/build/outputs/apk/release/app-release.apk "BudgetPro-${NATIVE_VERSION}.apk"
       - uses: actions/upload-artifact@v7
