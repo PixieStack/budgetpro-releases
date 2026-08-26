@@ -1,0 +1,18 @@
+{
+  "appId": "com.pixiestack.budgetpro",
+  "appName": "BudgetPro",
+  "webDir": "www",
+  "server": {
+    "url": "https://budgetpro-afq2.onrender.com/",
+    "cleartext": false,
+    "androidScheme": "https",
+    "allowNavigation": [
+      "budgetpro-afq2.onrender.com",
+      "*.supabase.co"
+    ]
+  },
+  "android": {
+    "allowMixedContent": false,
+    "backgroundColor": "#07101e"
+  }
+}

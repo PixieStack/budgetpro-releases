@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">BudgetPro</string>
+    <string name="title_activity_main">BudgetPro</string>
+    <string name="package_name">com.pixiestack.budgetpro</string>
+    <string name="custom_url_scheme">com.pixiestack.budgetpro</string>
+</resources>
