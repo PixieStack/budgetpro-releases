@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.provider.Settings;
+import android.content.pm.PackageManager;
 
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
@@ -55,7 +56,13 @@ public class NativeAppPlugin extends Plugin {
         JSObject result = new JSObject();
         result.put("installed", true);
         result.put("platform", "android");
-        result.put("version", BuildConfig.VERSION_NAME);
+        try {
+            String version = getContext().getPackageManager()
+                    .getPackageInfo(getContext().getPackageName(), 0).versionName;
+            result.put("version", version);
+        } catch (PackageManager.NameNotFoundException error) {
+            result.put("version", "0.0.0");
+        }
         result.put("architecture", Build.SUPPORTED_ABIS.length > 0 ? Build.SUPPORTED_ABIS[0] : "unknown");
         call.resolve(result);
     }
