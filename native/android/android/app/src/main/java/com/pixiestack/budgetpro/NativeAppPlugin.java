@@ -78,7 +78,11 @@ public class NativeAppPlugin extends Plugin {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && !getContext().getPackageManager().canRequestPackageInstalls()) {
             Intent permissionIntent = new Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES, Uri.parse("package:" + getContext().getPackageName()));
             getActivity().startActivity(permissionIntent);
-            call.reject("Allow BudgetPro to install updates, then select the update button again");
+            JSObject result = new JSObject();
+            result.put("started", false);
+            result.put("permissionRequired", true);
+            result.put("message", "Allow BudgetPro to install updates, then select the update button again");
+            call.resolve(result);
             return;
         }
 
