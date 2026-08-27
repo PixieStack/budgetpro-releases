@@ -1,18 +1,18 @@
 {
   "available": true,
-  "version": "1.0.8",
-  "releaseDate": "2026-08-26T23:39:53Z",
-  "releaseUrl": "https://github.com/PixieStack/budgetpro-releases/releases/tag/v1.0.8",
+  "version": "1.0.9",
+  "releaseDate": "2026-08-27T00:21:27Z",
+  "releaseUrl": "https://github.com/PixieStack/budgetpro-releases/releases/tag/v1.0.9",
   "windows": {
-    "name": "BudgetPro-Setup-1.0.8.exe",
-    "url": "https://github.com/PixieStack/budgetpro-releases/releases/download/v1.0.8/BudgetPro-Setup-1.0.8.exe",
-    "size": 111475948,
-    "digest": "sha256:4db3ffece9ab604ff27ba70639ada56af4a21378451557a077f315a654b1a916"
+    "name": "BudgetPro-Setup-1.0.9.exe",
+    "url": "https://github.com/PixieStack/budgetpro-releases/releases/download/v1.0.9/BudgetPro-Setup-1.0.9.exe",
+    "size": 111476096,
+    "digest": "sha256:82850dab3bda31a5c5e0e0024f5c1bb4ab869c40fb3e1a17a24fd5a5767010b9"
   },
   "android": {
-    "name": "BudgetPro-1.0.8.apk",
-    "url": "https://github.com/PixieStack/budgetpro-releases/releases/download/v1.0.8/BudgetPro-1.0.8.apk",
-    "size": 5177942,
-    "digest": "sha256:d04e6201bb9a8bafa645031c663ad15ef2f54920f0c55b7ce051dba143e71033"
+    "name": "BudgetPro-1.0.9.apk",
+    "url": "https://github.com/PixieStack/budgetpro-releases/releases/download/v1.0.9/BudgetPro-1.0.9.apk",
+    "size": 5177938,
+    "digest": "sha256:c17e1a33b9be7a7f41d9e978f6384badc2ec29a12b771c59ff7daa70c2080d02"
   }
 }
